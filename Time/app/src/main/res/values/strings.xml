@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Time</string>
+    <string name="inputAccount">tel/email/accountName</string>
+    <string name="inputPassword">password</string>
+    <string name="login">Login</string>
+    <string name="thirdPartyLogin">--------------  third party login  --------------</string>
+    <string name="SheZhi">设置</string>
+    <string name="BeiFen">备份</string>
+    <string name="HuiFu">恢复</string>
+    <string name="GuanYuWoMen">关于我们</string>
+    <string name="download">下载</string>
+    <string name="search">search</string>
+    <string name="home">home</string>
+    <string name="calender">calendar</string>
+    <string name="alarmClock">alarmClock</string>
+    <string name="budget">budget</string>
+    <string name="close">关闭</string>
+    <string name="shangchuantupianhuopaishezhaopian">上传图片或拍摄照片</string>
+    <string name="yaoyiyao">摇一摇</string>
+    <string name="yejianmoshi">夜间模式</string>
+    <string name="meirijizhangtixing">每日记账提醒</string>
+    <string name="qingchuyuyintupainshuju">清除语音图片数据</string>
+    <string name="my_app_id">mystitchapp-qbhmr</string>
+</resources>

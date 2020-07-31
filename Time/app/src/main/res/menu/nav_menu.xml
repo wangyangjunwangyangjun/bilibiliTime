@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:textColor="@color/black"
+            android:iconTint="@color/black"
+            android:title="首页"
+            />
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/setting"
+            android:textColor="@color/black"
+            android:iconTint="@color/black"
+            android:title="@string/SheZhi"
+            />
+        <item
+            android:id="@+id/beifen"
+            android:icon="@drawable/backup"
+            android:textColor="@color/black"
+            android:iconTint="@color/black"
+            android:title="@string/BeiFen"/>
+        <item
+            android:id="@+id/recover"
+            android:icon="@drawable/recover"
+            android:textColor="@color/black"
+            android:iconTint="@color/black"
+            android:title="@string/HuiFu"/>
+        <item
+            android:id="@+id/download"
+            android:icon="@drawable/download"
+            android:title="@string/download"
+            android:iconTint="@color/black"
+            />
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/about"
+            android:textColor="@color/black"
+            android:iconTint="@color/black"
+            android:title="@string/GuanYuWoMen"/>
+        <item
+            android:id="@+id/close"
+            android:title="@string/close"
+            android:icon="@drawable/guanbi"
+            />
+    </group>
+
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  android:state_activated="false">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+            <!-- 线的宽度，颜色灰色 -->
+            <stroke android:width="2dp" android:color="@color/color1"></stroke>
+            <!-- 矩形的圆角半径 -->
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <item  android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+            <!-- 线的宽度，颜色灰色 -->
+            <stroke android:width="2dp" android:color="@color/color2"></stroke>
+            <!-- 矩形的圆角半径 -->
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <item  android:state_activated="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" >
+            <!-- 线的宽度，颜色灰色 -->
+            <stroke android:width="2dp" android:color="@color/color2"></stroke>
+            <!-- 矩形的圆角半径 -->
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+</selector>

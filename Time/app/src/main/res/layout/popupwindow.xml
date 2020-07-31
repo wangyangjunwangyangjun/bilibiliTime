@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@color/color14"
+    android:alpha="0.9"
+    android:gravity="center"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/popup_window"
+        android:layout_width="325dp"
+        android:layout_height="600dp"
+        android:alpha="0.8"
+        android:background="@drawable/form"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="(•◡•) / 日程基本信息 \﻿ (•◡•) /"
+            android:textColor="#ffffff"
+            android:textSize="19dp" />
+        <View
+            android:id="@+id/title_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/title"
+            android:background="@color/black" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="35dp">
+            <TextView
+                android:id="@+id/content1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="45dp"
+                android:text="Key1: 日程名称"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edit1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="  get done some tasks......"
+                android:textSize="12dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintHorizontal_bias="0.306"
+                app:layout_constraintLeft_toRightOf="@+id/content1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/content1"
+                app:layout_constraintTop_toTopOf="@+id/content1" />
+
+            <TextView
+                android:id="@+id/content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Key-2: 选择该的日程类型"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit1" />
+
+            <com.example.time.myGridView.MyGridView
+                android:id="@+id/icon_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnWidth="120dp"
+                android:numColumns="auto_fit"
+                android:padding="2dp"
+                android:stretchMode="columnWidth"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content2" />
+
+            <TextView
+                android:id="@+id/content3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Key-3: 日程的备注(可选*)"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/icon_group"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <EditText
+                android:id="@+id/edit3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="  get done some tasks......"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content3" />
+
+            <TextView
+                android:id="@+id/content4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Key-4: 选择该日程的等级"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit3"/>
+
+            <com.example.time.myGridView.MyGridView
+                android:id="@+id/level_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnWidth="140dp"
+                android:numColumns="auto_fit"
+                android:padding="2dp"
+                android:stretchMode="columnWidth"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content4" />
+
+            <TextView
+                android:id="@+id/content5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Key-5: 选择该日程的日期的和时间"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                android:textSize="14dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/level_group" />
+
+            <ImageView
+                android:id="@+id/content6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/date"
+                app:layout_constraintRight_toLeftOf="@id/dateValue"
+                app:layout_constraintStart_toStartOf="@+id/content5"
+                app:layout_constraintTop_toBottomOf="@+id/content5" />
+
+            <TextView
+                android:id="@+id/dateValue"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:hint="date"
+                app:layout_constraintBottom_toBottomOf="@id/content6"
+                app:layout_constraintTop_toTopOf="@id/content6"
+                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintLeft_toRightOf="@+id/content6"
+                tools:layout_editor_absoluteX="39dp" />
+
+            <ImageView
+                android:id="@+id/content7"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/time"
+                app:layout_constraintBottom_toBottomOf="@+id/content6"
+                app:layout_constraintStart_toEndOf="@+id/dateValue"
+                app:layout_constraintTop_toBottomOf="@+id/content5"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/timeValue"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="12dp"
+                android:hint="time"
+                app:layout_constraintBottom_toBottomOf="@+id/content7"
+                app:layout_constraintStart_toEndOf="@+id/content7"
+                app:layout_constraintTop_toTopOf="@+id/content7" />
+<!--            <ImageView-->
+<!--                android:id="@+id/dingWei"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/dingwei"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/content6"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/timeValueValue"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_marginStart="14dp"-->
+<!--                android:hint="location"-->
+<!--                app:layout_constraintLeft_toRightOf="@+id/dingWei"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/dingWei"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/dingWei"/>-->
+<!--            <ImageView-->
+<!--                android:id="@+id/naoZhong"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/alarm_clock"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/dingWei"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="alarm clock"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                app:layout_constraintLeft_toRightOf="@id/naoZhong"-->
+<!--                app:layout_constraintTop_toTopOf="@id/naoZhong"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/naoZhong"/>-->
+<!--            <Switch-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="100dp"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/naoZhong"-->
+<!--                app:layout_constraintLeft_toRightOf="@+id/naoZhong"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/naoZhong"/>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+            <Button
+                android:id="@+id/negativeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/form"
+                android:focusable="true"
+                android:padding="5dp"
+                android:text="no"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+            <Button
+                android:id="@+id/positiveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:background="@drawable/form"
+                android:focusable="true"
+                android:padding="5dp"
+                android:text="Yes"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

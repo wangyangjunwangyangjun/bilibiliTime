@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modifySchedule.ModifySchedule">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/mainTextColor"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:popupTheme="@style/AppTheme"
+            app:navigationIcon="@drawable/back"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@drawable/modif_activity_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="350dp"
+            android:layout_height="620dp"
+            android:alpha="0.7"
+            android:background="@drawable/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/moreDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="日程名称"
+            android:textColor="@color/color13"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/textView0"
+            app:layout_constraintTop_toTopOf="@id/textView0"
+            app:layout_constraintBottom_toBottomOf="@id/textView0"
+            android:layout_marginStart="150dp"/>
+
+        <TextView
+            android:id="@+id/textView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="164dp"
+            android:text="闹钟设置"
+            android:textSize="17dp"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@id/textView3"
+            android:textSize="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="60dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="闹钟提醒时间为当日的"
+            app:layout_constraintTop_toBottomOf="@id/textView0"/>
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="250dp"
+            android:alpha="0.8"
+            android:background="@drawable/morning_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="350dp"
+            android:alpha="0.8"
+            android:background="@drawable/morning_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="410dp"
+            android:alpha="0.8"
+            android:background="@drawable/morning_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView14"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="2dp"-->
+<!--            android:layout_marginTop="480dp"-->
+<!--            android:alpha="0.8"-->
+<!--            android:background="@drawable/morning_bg"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alarm_clock_time_1"
+            android:hint="10"
+            android:textSize="15dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintLeft_toRightOf="@id/textView3"
+            app:layout_constraintBottom_toBottomOf="@id/textView3"
+            app:layout_constraintTop_toTopOf="@id/textView3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            android:text=":"
+            android:textSize="15dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintLeft_toRightOf="@id/alarm_clock_time_1"
+            app:layout_constraintBottom_toBottomOf="@id/alarm_clock_time_1"
+            app:layout_constraintTop_toTopOf="@id/alarm_clock_time_1"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alarm_clock_time_2"
+            android:hint="10"
+            android:textSize="15dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintLeft_toRightOf="@id/textView11"
+            app:layout_constraintBottom_toBottomOf="@id/textView11"
+            app:layout_constraintTop_toTopOf="@id/textView11"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12"
+            android:text=":"
+            android:textSize="15dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintLeft_toRightOf="@id/alarm_clock_time_2"
+            app:layout_constraintBottom_toBottomOf="@id/alarm_clock_time_2"
+            app:layout_constraintTop_toTopOf="@id/alarm_clock_time_2"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alarm_clock_time_3"
+            android:hint="10"
+            android:textSize="15dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintLeft_toRightOf="@id/textView12"
+            app:layout_constraintBottom_toBottomOf="@id/textView12"
+            app:layout_constraintTop_toTopOf="@id/textView12"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="日程定位"
+            android:textSize="17dp"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <Switch
+            android:id="@+id/b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/textView2"
+            app:layout_constraintTop_toTopOf="@id/textView2"
+            app:layout_constraintBottom_toBottomOf="@id/textView2"
+            android:layout_marginStart="150dp"/>
+
+        <ImageView
+            android:id="@+id/textView4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/color4"
+            android:foreground="@drawable/photo"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="地址为"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="点击按钮获取定位地址"
+            android:textSize="12dp"
+            android:layout_marginStart="25dp"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="上传照片"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/color4"
+            android:foreground="@drawable/dingwei"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@id/textView2" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView7"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="60dp"-->
+<!--            android:text="日程基本信息设置"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:textSize="17dp"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView9" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/b3"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginLeft="90dp"-->
+<!--            android:background="@drawable/left_arrow"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/textView7"-->
+<!--            app:layout_constraintLeft_toRightOf="@id/textView7"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/textView7" />-->
+
+        <ImageView
+            android:id="@+id/photoButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="150dp"
+            android:background="@drawable/left_arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView10"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:text="日程留言"-->
+<!--            android:textSize="17dp"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/textView7"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView7" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editText2"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:hint="说些什么吧......"-->
+<!--            android:textSize="14dp"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/textView10"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView10" />-->
+        <ImageView
+            android:id="@+id/ivSchedulePhoto"
+            android:layout_marginTop="10dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13"/>
+        <com.example.time.circleImageView.RoundImageView
+            android:id="@+id/go"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/go"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivSchedulePhoto" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
